@@ -1,0 +1,60 @@
+package myalgorithm;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.StringTokenizer;
+
+public class ForExample_0818Map {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		int n = Integer.parseInt(br.readLine());
+		
+		
+		HashMap<String, String>paraMap = new HashMap<>();
+		
+		for(int i=0; i<n; i++) {
+			
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			
+			String name = st.nextToken();
+			
+			String status = st.nextToken();
+			
+			if(paraMap.containsKey(name)) {
+				paraMap.remove(name);
+			}else {
+				
+				
+					paraMap.put(name, status);
+				
+				
+				
+			}
+			
+			
+		}
+		
+		ArrayList<String> mapList = new ArrayList<>(paraMap.keySet());
+		
+		Collections.sort(mapList, (a,b) -> b.compareTo(a));
+		
+		for(String key: mapList) {
+			
+			System.out.println(key);
+			
+		}
+		
+	}
+
+}
