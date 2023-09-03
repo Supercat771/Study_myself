@@ -1,0 +1,39 @@
+package myalgorithm;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class ForExample_countingWord {
+
+	public static void main(String[] args) throws IOException {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		StringTokenizer st;
+		
+		
+		
+		
+		String sth = br.readLine().trim();
+		
+		
+		if(sth.length() == 0 ) {
+			System.out.println(0);
+		}
+		
+		else {
+			
+	
+			st = new StringTokenizer(sth," ");
+			
+			System.out.println(st.countTokens());
+			
+		
+		}
+		
+	}
+
+}
